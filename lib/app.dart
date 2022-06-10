@@ -9,7 +9,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      // onGenerateRoute: MyRoutes.generateRoute,
       home: SplashScreen(),
     );
   }

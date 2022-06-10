@@ -2,7 +2,6 @@ import 'package:frutasvideo/src/views/merienda_view.dart';
 import 'package:frutasvideo/src/views/desayuno_view.dart';
 import 'package:frutasvideo/src/widgets/category_card.dart';
 import 'package:flutter/material.dart';
-import 'package:frutasvideo/src/widgets/custom_navi_bar.dart';
 
 import '../views/todo_view.dart';
 
@@ -37,7 +36,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
               child: SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1,
                 child: CategoryCard(
-                  label: 'Comida Saludable',
+                  label: 'Alimentacion Saludable'.toUpperCase(),
 
                 ),
                 // ListView.builder(
@@ -65,7 +64,6 @@ class _PlayerScreenState extends State<PlayerScreen> {
             views[category]?.call() ?? const TodoView(),
           ],
         ),
-        bottomNavigationBar: const CustomNaviBar(),
       ),
     );
   }

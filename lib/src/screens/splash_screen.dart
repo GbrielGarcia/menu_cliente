@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:frutasvideo/src/home/home.dart';
 import 'package:frutasvideo/src/screens/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class VideoState extends State<SplashScreen> with SingleTickerProviderStateMixin
   }
 
   void navigationPage() {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen()));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen()));
   }
 
   @override
@@ -67,7 +68,7 @@ class VideoState extends State<SplashScreen> with SingleTickerProviderStateMixin
                       ),
                     ),
                     TextSpan(
-                      text: 'V2.0.0',
+                      text: 'V1.7.0',
                       style: Theme.of(context)
                           .textTheme
                           .subtitle2!

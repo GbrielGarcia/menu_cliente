@@ -1,3 +1,4 @@
+import 'package:frutasvideo/src/home/home.dart';
 import 'package:frutasvideo/src/screens/player_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,8 +23,8 @@ class HomeScreen extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => const PlayerScreen()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (_) =>  Home()));
                 },
                 child: const Icon(Icons.play_arrow))
           ],
