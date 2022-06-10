@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frutasvideo/src/screen/splash.dart';
-import 'package:provider/provider.dart';
+import 'package:frutasvideo/src/screens/home_screen.dart';
+import 'package:frutasvideo/src/screens/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       // onGenerateRoute: MyRoutes.generateRoute,
-      home: Splash(),
+      home: SplashScreen(),
     );
   }
 }

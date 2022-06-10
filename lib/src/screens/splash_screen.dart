@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:frutasvideo/src/screen/menu.dart';
+import 'package:frutasvideo/src/screens/home_screen.dart';
 
-class Splash extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
   @override
   VideoState createState() => VideoState();
 }
 
-class VideoState extends State<Splash> with SingleTickerProviderStateMixin {
+class VideoState extends State<SplashScreen> with SingleTickerProviderStateMixin {
   var _visible = true;
 
   late AnimationController animationController;
@@ -19,7 +19,7 @@ class VideoState extends State<Splash> with SingleTickerProviderStateMixin {
   }
 
   void navigationPage() {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menu()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen()));
   }
 
   @override
@@ -29,7 +29,7 @@ class VideoState extends State<Splash> with SingleTickerProviderStateMixin {
     animationController = new AnimationController(
         vsync: this, duration: new Duration(seconds: 1));
     animation =
-        new CurvedAnimation(parent: animationController, curve: Curves.easeOut);
+    new CurvedAnimation(parent: animationController, curve: Curves.easeOut);
 
     animation.addListener(() => this.setState(() {}));
     animationController.forward();
@@ -67,7 +67,7 @@ class VideoState extends State<Splash> with SingleTickerProviderStateMixin {
                       ),
                     ),
                     TextSpan(
-                      text: 'V1.0.0',
+                      text: 'V2.0.0',
                       style: Theme.of(context)
                           .textTheme
                           .subtitle2!

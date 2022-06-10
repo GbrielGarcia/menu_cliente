@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frutasvideo/app.dart';
-import 'package:frutasvideo/src/home/home.dart';
-import 'package:frutasvideo/src/provider/provider.dart';
+import 'package:frutasvideo/src/providers/favourites_provider.dart';
 import 'package:provider/provider.dart';
 void main() {
   runApp(const MyMain());
@@ -15,7 +14,8 @@ class MyMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MultiProvider(
       providers:[
-        ChangeNotifierProvider(create: (_) => PageViewNav(), lazy: false),
+
+        ChangeNotifierProvider(create: (_) => FavouritesProvider())
       ],
       child: const MyApp(),
     );
